@@ -31,7 +31,7 @@ export default function Home() {
   }, [messages]);
 
   async function onSubmitText(text: string) {
-    setMessages(prev => {
+    /* setMessages(prev => {
       const newState = [...prev];  
       newState.push({
         id: uuid4(),
@@ -48,7 +48,7 @@ export default function Home() {
       })
       return newState;
     })
-    return;
+    return; */
     let topic = text ? capitalizeFirstLetter(text) : "Any"
     if(ApiSearchQueryOptions.findIndex(item => item === topic) === -1) {
       topic = "Any"
