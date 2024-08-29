@@ -3,10 +3,12 @@ import { AIChat } from "@/_components/Chat/AIChat/AIChat";
 import { UserChat } from "@/_components/Chat/UserChat/UserChat";
 import { PrimaryTextInput } from "@/_components/PrimaryTextInput/PrimaryTextInput";
 import { useThemeContext } from "@/state/theme";
+import { IJokeResponse } from "@/types/data-types";
 import { cn } from "@/utils/misc";
 import { useEffect, useState } from "react";
 
 interface IChat {
+  id: string;
   senderType: TSender;
   message: string;
   createdAt: string;
@@ -24,8 +26,28 @@ export default function Home() {
 
   }, []);
 
-  function onSubmitText(text: string) {
-    setMessages(prev => {
+  async function onSubmitText(text: string) {
+    try {
+      const res = await fetch(`${process.env.BASE_URL}/Any`);
+      const data = await res.json() as IJokeResponse;
+      console.log("Joke data", data);
+      setMessages(prev => {
+        const newState = [...prev];  
+        newState.push({
+          id: `${data.id}`,
+          senderType: "ai",
+          message: data.joke ? data.joke : data.setup && data.delivery ? `${data.setup}\n${data.delivery}` : "",
+          createdAt: (new Date()).toString(),
+        });
+        return newState;
+      })
+    } catch (error) {
+      console.error("Error in joke api call");
+      console.error(error);
+    }
+    
+    
+    /* setMessages(prev => {
       const newState = [...prev];
       newState.push({
         senderType: "user",
@@ -39,7 +61,7 @@ export default function Home() {
         createdAt: (new Date()).toString(),
       });
       return newState;
-    })
+    }) */
   }
   return (
     <main className={cn(isDark ? "bg-mine-shaft" : "bg-white" , "w-full h-screen")} >
@@ -51,6 +73,7 @@ export default function Home() {
                 if(item.senderType === "user") {
                   return (
                     <UserChat
+                      key={item.id}
                       className="self-end"
                       text={item.message}
                     />
@@ -59,6 +82,7 @@ export default function Home() {
 
                 return (
                   <AIChat
+                    key={item.id}
                     text={item.message}
                   />
                 )
