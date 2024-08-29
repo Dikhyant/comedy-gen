@@ -1,4 +1,4 @@
-import { COLORS } from "@/utils/constants"
+"use client"
 import { cn } from "@/utils/misc";
 import { CSSProperties, ReactNode } from "react";
 
@@ -7,6 +7,8 @@ type TButton = {
     style?: CSSProperties;
     children?: ReactNode;
     className?: string;
+    type?: "button" | "submit" | "reset";
+    onClick?: ((e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void);
 }
 
 type TVariant = "filled" | "outlined"
@@ -16,18 +18,19 @@ export const Button:React.FC<TButton> = ({
     className,
     variant = "filled",
     style,
+    type,
+    ...props
 }) => {
+    function onClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        if(props.onClick instanceof Function) {
+            props.onClick(e);
+        }
+    }
     return (
         <button 
-        /* style={{
-            display: "block",
-            width: 50,
-            height: 30,
-            backgroundColor: variant === "filled" ? COLORS["ironside-grey"] : "transparent",
-            borderRadius: 1000,
-            ...style
-        }}  */
+            type={type ?? type}
             className={cn("block w-[50px] h-[30px] rounded-full", variant === "filled" ? "bg-ironside-grey" : "bg-transparent", className)}
+            onClick={onClick}
         >{children}</button>
     )
 }
