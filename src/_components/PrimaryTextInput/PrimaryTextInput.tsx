@@ -9,11 +9,13 @@ import UpArrow from "../Icons/UpArrow";
 type TPrimaryTextInput = {
     style?: CSSProperties;
     className?: string;
+    placeholder?: string;
 }
 
 export const PrimaryTextInput:React.FC<TPrimaryTextInput> = ({
     style,
     className,
+    placeholder,
 }) => {
     const {isDark} = useThemeContext();
     return (
@@ -35,7 +37,8 @@ export const PrimaryTextInput:React.FC<TPrimaryTextInput> = ({
                 /* style={{
                     flex: 1
                 }} */
-                className={cn("bg-thunder w-full ml-[40px] block text-silver")} />
+                placeholder={placeholder ? placeholder : "Say something friend..."}
+                className={cn("bg-thunder w-full ml-[40px] block text-silver placeholder:text-silver")} />
             <Button 
                 className="h-full aspect-square flex items-center justify-center"
             >

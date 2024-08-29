@@ -20,6 +20,7 @@ const config: Config = {
         "white-smoke": "#f4f4f4",
         "ironside-grey": "#676767",
         "silver": "#c4c6c6",
+        "harp": "#e7edf2",
       }
     },
   },
