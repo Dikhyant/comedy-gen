@@ -44,7 +44,6 @@ export const PrimaryTextInput:React.FC<TPrimaryTextInput> = ({
             onSubmit={onSubmit}
         >
             <input
-                name="message"
                 placeholder={placeholder ? placeholder : "Say something friend..."}
                 className={cn("bg-thunder w-full ml-[40px] block text-silver placeholder:text-silver")} 
                 onChange={onChange}

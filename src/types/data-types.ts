@@ -1,7 +1,7 @@
 export interface IJokeResponse {
     "error": boolean,
     "category": string,
-    "type": string,
+    "type": string, // single | twopart
     "joke": string,
     "setup": string,
     "delivery": string,
