@@ -1,6 +1,7 @@
 "use client"
 import { AIChat } from "@/_components/Chat/AIChat/AIChat";
 import { UserChat } from "@/_components/Chat/UserChat/UserChat";
+import { Header } from "@/_components/Header/Header";
 import { PrimaryTextInput } from "@/_components/PrimaryTextInput/PrimaryTextInput";
 import { useThemeContext } from "@/state/theme";
 import { IJokeResponse } from "@/types/data-types";
@@ -87,6 +88,7 @@ export default function Home() {
   return (
     <main className={cn(isDark ? "bg-mine-shaft" : "bg-white" , "w-full h-screen")} >
       <div className="w-full h-full flex flex-col items-center justify-end pb-8" >
+        <Header />
         <div 
           className="flex flex-col items-center overflow-y-scroll flex-1 w-full pb-[54px]" 
           ref={chatContainerRef}

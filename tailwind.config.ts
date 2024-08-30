@@ -21,6 +21,9 @@ const config: Config = {
         "ironside-grey": "#676767",
         "silver": "#c4c6c6",
         "harp": "#e7edf2",
+        "mountain-mist": "#8f9599",
+        "charcoal-grey": "#424242",
+        "dark-grey": "#393939",
       }
     },
   },
