@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="47.49522mm"
+   height="54.708256mm"
+   viewBox="0 0 168.29015 193.84815"
+   id="svg11290"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="charlie chaplin.svg">
+  <defs
+     id="defs11292" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.0932797"
+     inkscape:cx="84.145074"
+     inkscape:cy="96.924076"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata11295">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-629.706,-148.58549)">
+    <path
+       style="fill:#000000"
+       d="m 695.40884,339.68364 c 0.27114,-1.5125 1.05191,-6.2375 1.73506,-10.5 l 1.24208,-7.75 13.87844,0 c 7.63314,0 13.87844,0.14425 13.87844,0.32055 0,0.1763 0.9,4.53205 2,9.67945 1.1,5.1474 2,9.72815 2,10.17945 0,0.4513 -7.92607,0.82055 -17.6135,0.82055 l -17.6135,0 z m 72.70927,-68.8151 c -0.53639,-1.4108 -0.97525,-2.91606 -0.97525,-3.34501 0,-2.04487 -4.17917,-3.97555 -11,-5.08176 -30.6243,-4.96666 -60.09975,-12.87185 -85.64545,-22.96975 l -9.85455,-3.89538 -1.21517,3.47911 c -1.94823,5.57787 -3.28439,14.36407 -3.44151,22.63031 -0.0803,4.22322 -0.45096,7.49007 -0.82374,7.25968 -0.37279,-0.23039 -1.26118,-2.85071 -1.9742,-5.82294 -1.25837,-5.24549 -0.99019,-19.98352 0.49534,-27.22135 0.59772,-2.91221 0.39844,-3.125 -5.03623,-5.37754 -12.68435,-5.25737 -21.61325,-13.58151 -18.21422,-16.98054 1.5646,-1.5646 2.67141,-1.4285 11.30648,1.39027 10.61978,3.46665 13.15503,3.33871 14.86261,-0.75 0.74653,-1.7875 1.66754,-5.05 2.0467,-7.25 1.87318,-10.86873 9.0212,-33.2904 12.13312,-38.05878 13.92015,-21.32975 51.90846,-26.79692 82.13826,-11.82109 12.23049,6.05897 22.4181,15.94985 27.94336,27.12945 3.49815,7.07802 3.77641,8.28268 3.7417,16.19856 -0.0386,8.80522 -0.74378,12.1796 -7.53403,36.05186 -2.99348,10.52406 -3.57416,13.76306 -2.63421,14.69336 0.66316,0.65635 5.31626,1.8502 10.34022,2.65299 10.9158,1.74428 13.60451,2.96277 13.1762,5.97131 -0.42186,2.96331 -6.63317,4.49824 -18.62195,4.60186 l -9.31128,0.0805 0.67482,4.5 c 0.75784,5.05367 -0.91401,6.30894 -2.57702,1.9349 z"
+       id="path11862"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sscssssscscssscsscsssssssssssssssscscc" />
+  </g>
+</svg>
