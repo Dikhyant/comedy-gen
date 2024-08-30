@@ -16,7 +16,7 @@ export default function Select({
     ...props
 }: TSelect){
     const {isDark} = useThemeContext();
-    const [isDropDownVisible, setIsDropDownVisible] = useState<boolean>(true);
+    const [isDropDownVisible, setIsDropDownVisible] = useState<boolean>(false);
     const [value, setValue] = useState<string>(initialValue ? initialValue : options[0] ? options[0] : "");
 
     useEffect(() => {
