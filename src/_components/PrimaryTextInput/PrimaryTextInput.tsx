@@ -10,12 +10,14 @@ type TPrimaryTextInput = {
     style?: CSSProperties;
     className?: string;
     placeholder?: string;
+    isFormToBeClearedOnSubmit?: boolean;
     onChange?: ((e: ChangeEvent<HTMLInputElement>) => void);
     onSubmitText?: ((text: string) => void);
     onSubmit?: ((e: FormEvent<HTMLFormElement>) => void);
 }
 
 export const PrimaryTextInput:React.FC<TPrimaryTextInput> = ({
+    isFormToBeClearedOnSubmit = false,
     style,
     className,
     placeholder,
@@ -36,6 +38,9 @@ export const PrimaryTextInput:React.FC<TPrimaryTextInput> = ({
         if(props.onSubmitText instanceof Function) {
             props.onSubmitText(text);
         }
+        if(isFormToBeClearedOnSubmit) {
+            setText("");
+        }
     }
 
     return (
@@ -47,9 +52,10 @@ export const PrimaryTextInput:React.FC<TPrimaryTextInput> = ({
                 placeholder={placeholder ? placeholder : "Say something friend..."}
                 className={
                     cn(
-                        "bg-transparent w-11/12 ml-[40px] block",
+                        "bg-transparent w-11/12 ml-[40px] block focus:outline-none",
                         isDark ? "text-silver placeholder:text-silver" : "text-woodsmoke placeholder:text-woodsmoke"
                     )} 
+                value={text}
                 onChange={onChange}
             />
             <Button 

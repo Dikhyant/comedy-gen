@@ -90,7 +90,7 @@ export default function Home() {
       <div className="w-full h-full flex flex-col items-center justify-end pb-8" >
         <Header />
         <div 
-          className="flex flex-col items-center overflow-y-scroll flex-1 w-full pb-[54px]" 
+          className="flex flex-col items-center overflow-y-scroll flex-1 w-full pt-6 pb-[54px]" 
           ref={chatContainerRef}
         >
           <div className="flex flex-col gap-y-[18px] w-11/12 md:w-[768px] items-stretch" >
@@ -114,18 +114,11 @@ export default function Home() {
                 )
               })
             }
-           {/*  <UserChat
-              className=" self-end" 
-              text={"there is a .env file we use in node js projects\ninside this .env file we often store api keys , tokens, \nserver urls Is there a similar feature in unity ?"}
-            />
-            <AIChat 
-              className="" 
-              text="Yes, Unity has a similar conces, tokecific variables in Unity:" 
-            /> */}
           </div>
         </div>
         <PrimaryTextInput 
           className="w-11/12 md:w-[768px]"
+          isFormToBeClearedOnSubmit={true}
           onSubmitText={onSubmitText}
         />
       </div>
