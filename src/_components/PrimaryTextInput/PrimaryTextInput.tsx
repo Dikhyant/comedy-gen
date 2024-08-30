@@ -40,19 +40,26 @@ export const PrimaryTextInput:React.FC<TPrimaryTextInput> = ({
 
     return (
         <form 
-            className={cn("flex items-center justify-between rounded-full w-[100px] h-[52px] p-[6px] gap-x-2", isDark ? "bg-thunder" : "bg-white-smoke", className)} 
+            className={cn("flex items-center justify-between rounded-full w-[100px] h-[52px] p-[6px] px-3 gap-x-2", isDark ? "bg-thunder" : "bg-white-smoke", className)} 
             onSubmit={onSubmit}
         >
             <input
                 placeholder={placeholder ? placeholder : "Say something friend..."}
-                className={cn("bg-thunder w-full ml-[40px] block text-silver placeholder:text-silver")} 
+                className={
+                    cn(
+                        "bg-transparent w-11/12 ml-[40px] block",
+                        isDark ? "text-silver placeholder:text-silver" : "text-woodsmoke placeholder:text-woodsmoke"
+                    )} 
                 onChange={onChange}
             />
             <Button 
-                className="h-full aspect-square flex items-center justify-center"
-                
+                className={
+                    cn(
+                        "h-8 w-8 rounded-full bg-slate-700 flex items-center justify-center",
+                        isDark ? text.length === 0 ? "bg-ironside-grey text-thunder" : "bg-white text-black" : text.length === 0 ? "bg-iron text-white-smoke" : "bg-black text-white-smoke",
+                    )}    
             >
-                <UpArrow color={COLORS.thunder} />
+                <UpArrow  />
             </Button>
         </form>
     )

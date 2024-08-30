@@ -1,3 +1,5 @@
+"use client"
+import { useThemeContext } from "@/state/theme";
 import { cn } from "@/utils/misc";
 
 type TOptionButton = {
@@ -13,7 +15,7 @@ export const OptionButton:React.FC<TOptionButton> = ({
     isSelected = false,
     ...props
 }) => {
-
+    const {isDark} = useThemeContext();
     function onClick() {
         if(props.onClick instanceof Function) {
             props.onClick();
@@ -21,11 +23,15 @@ export const OptionButton:React.FC<TOptionButton> = ({
     }
     return (
         <button 
-            className={cn("flex items-center justify-between hover:bg-charcoal-grey rounded-md p-3",className)} 
+            className={
+                cn(
+                    "flex items-center justify-between  rounded-md p-3",
+                    isDark ? "hover:bg-charcoal-grey" : "hover:bg-snow-drift",
+                    className)} 
             onClick={onClick}
         >
             <div>{value}</div>
-            {isSelected && <div></div>}
+            {isSelected && <div className={cn("w-3 h-3 rounded-full" , isDark ? "bg-white" : "bg-thunder")} ></div>}
         </button>
     )
 }

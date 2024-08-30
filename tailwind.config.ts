@@ -24,6 +24,10 @@ const config: Config = {
         "mountain-mist": "#8f9599",
         "charcoal-grey": "#424242",
         "dark-grey": "#393939",
+        "dawn-pink": "#ececec",
+        "woodsmoke": "#0d0d0d",
+        "snow-drift": "#f9f9f9",
+        "iron": "#d7d7d7",
       }
     },
   },

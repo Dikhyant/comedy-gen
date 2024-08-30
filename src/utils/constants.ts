@@ -3,4 +3,13 @@ export const COLORS = {
     "thunder": "#2f2f2f",
     "white-smoke": "#f4f4f4",
     "ironside-grey": "#676767",
+    "silver": "#c4c6c6",
+    "harp": "#e7edf2",
+    "mountain-mist": "#8f9599",
+    "charcoal-grey": "#424242",
+    "dark-grey": "#393939",
+    "dawn-pink": "#ececec",
+    "woodsmoke": "#0d0d0d",
+    "snow-drift": "#f9f9f9",
+    "iron": "#d7d7d7",
 }
